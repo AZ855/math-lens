@@ -87,3 +87,9 @@ media encoders, browser runtimes, and generated build artifacts are excluded.
 
 See [GitHub's licensing guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 for the distinction between publishing a repository and granting reuse rights.
+
+### Acknowledgments
+
+Math Lens is an independently developed creative computing project. Some initial ideas, mathematical concepts, and foundational implementation logic were inspired by or adapted from the [Math+Code+Art initiative](https://math-code-art.github.io/).
+
+The project extends these foundations through interactive mathematical lenses, adaptive visual controls, computational process visualizations, and custom interaction design.
