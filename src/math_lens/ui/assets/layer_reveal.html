@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#29313a;font:14px system-ui,sans-serif}
+#reveal-root{max-width:1000px;margin:auto;padding:4px 2px 12px}
+.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+button{border:1px solid #d9dde4;border-radius:7px;padding:8px 12px;background:#fff;color:#29313a;font:inherit;cursor:pointer}
+button:hover{background:#f2f4f7}button:focus-visible,canvas:focus-visible{outline:2px solid #507bad;outline-offset:2px}
+button[aria-pressed="true"]{background:#edf3fa;border-color:#507bad}
+#status{font-size:12px;color:#69727e;margin-left:auto}
+.brush{display:flex;align-items:center;gap:7px;font-size:12px;color:#687381;margin-bottom:12px}
+.brush label{color:#29313a;font-size:14px;margin-right:6px}.brush input{width:160px;accent-color:#507bad}
+.stage{position:relative}canvas{display:block;width:100%;height:auto;border-radius:8px;touch-action:none}
+#brush-cursor{position:absolute;border:1px solid #507bad;border-radius:50%;pointer-events:none;display:none;background:rgba(255,255,255,.05);box-shadow:0 0 0 1px rgba(255,255,255,.7)}
+.hint{font-size:12px;color:#687381;margin:10px 0 0;line-height:1.5}
+#layers{font-size:11px;color:#7b8490;margin:5px 0 0;line-height:1.5}
+.error{color:#a33232}button:disabled{opacity:.5;cursor:wait}
+</style></head><body>
+<main id="reveal-root">
+<div class="toolbar">
+<button id="start" disabled>Start Reveal · S</button><button id="pause" disabled>Pause · Q</button>
+<button id="preview" aria-pressed="false" disabled>Preview Final</button><button id="reset" disabled>Reset Reveal</button>
+<span id="status" role="status" aria-live="polite">Loading six layers…</span>
+</div>
+<div class="brush"><label for="brush-size">Reveal Brush</label><span>Small</span>
+<input id="brush-size" aria-label="Reveal Brush" type="range" min="2" max="15" step="0.5" value="5"><span>Large</span></div>
+<div class="stage"><canvas id="reveal-canvas" tabindex="0" aria-label="Layer Reveal canvas. Focus here; S starts and Q pauses."></canvas><div id="brush-cursor"></div></div>
+<p class="hint">Move over the image to reveal one layer per pass. Move away and return to go deeper. Click the canvas for S / Q keyboard controls.</p>
+<p id="layers">Final → Mesh → Relaxed Points → Lloyd → Initial Points → Original</p>
+</main>
+<script type="application/json" id="reveal-payload">__PAYLOAD__</script>
+<script>__STATE_JS__</script>
+<script>__CANVAS_JS__</script>
+</body></html>

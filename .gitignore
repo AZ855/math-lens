@@ -1,0 +1,78 @@
+.venv/
+.pytest_cache/
+*.egg-info/
+__pycache__/
+*.pyc
+.DS_Store
+outputs/*
+!outputs/.gitkeep
+
+# Local browser-testing artifacts
+.playwright-cli/
+output/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Editor files
+.vscode/
+.idea/
+
+# Portfolio media outputs
+docs/portfolio_media/screenshots_raw/
+docs/portfolio_media/screenshots_selected/
+docs/portfolio_media/videos_raw/
+docs/portfolio_media/videos_selected/
+docs/portfolio_media/tmp/
+docs/portfolio_media/contact_sheets/
+
+# Internal capture records and audits are not part of the public release.
+/docs/portfolio_media/
+/docs/portfolio_audit/
+
+# Optional private example: retain locally pending permission review.
+/assets/inputs/example.JPG
+
+# Browser / test artifacts
+playwright-report/
+test-results/
+.tmp_capture/
+
+# Common video / animation artifacts
+*.webm
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.gif
+
+# Local credentials, diagnostics, and generated build metadata
+.envrc
+.streamlit/secrets.*
+*.pem
+*.key
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+build/
+dist/
+*.dist-info/
+*.pyo
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+/tmp/
+/diagnostics/
+/recordings/
+/traces/
+/screenshots/
+/videos/
